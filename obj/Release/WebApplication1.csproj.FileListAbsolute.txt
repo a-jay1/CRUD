@@ -72,3 +72,15 @@ C:\Users\Admin\source\repos\WebApplication1\obj\Release\WebApplication1.csproj.C
 C:\Users\Admin\source\repos\WebApplication1\obj\Release\WebApplication1.dll
 C:\Users\Admin\source\repos\WebApplication1\obj\Release\WebApplication1.pdb
 C:\Users\Admin\source\repos\WebApplication1\obj\Release\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\WebApplication1\bin\OpenCvSharp.dll
+C:\Users\Admin\source\repos\WebApplication1\bin\Python.Runtime.dll
+C:\Users\Admin\source\repos\WebApplication1\bin\System.Buffers.dll
+C:\Users\Admin\source\repos\WebApplication1\bin\System.Memory.dll
+C:\Users\Admin\source\repos\WebApplication1\bin\System.Numerics.Vectors.dll
+C:\Users\Admin\source\repos\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\source\repos\WebApplication1\bin\OpenCvSharp.xml
+C:\Users\Admin\source\repos\WebApplication1\bin\Python.Runtime.xml
+C:\Users\Admin\source\repos\WebApplication1\bin\System.Buffers.xml
+C:\Users\Admin\source\repos\WebApplication1\bin\System.Memory.xml
+C:\Users\Admin\source\repos\WebApplication1\bin\System.Numerics.Vectors.xml
+C:\Users\Admin\source\repos\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml

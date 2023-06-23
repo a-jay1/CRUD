@@ -32,7 +32,7 @@ namespace YourNamespace
                 if (passwordCorrect)
                 {
                     // Password is correct, proceed to the authenticated page
-                    Response.Redirect("welcome.aspx");
+                    Response.Redirect("b4toss.aspx");
                 }
                 else
                 {
@@ -63,7 +63,7 @@ namespace YourNamespace
 
                 return count > 0;
             }
-            return false;
+            //return false;
         }
 
         private bool CheckPasswordCorrect(string email, string password, string connectionString)
@@ -87,7 +87,7 @@ namespace YourNamespace
 
                 return count > 0;
             }
-            return false;
+            //return false;
         }
     }
 }
