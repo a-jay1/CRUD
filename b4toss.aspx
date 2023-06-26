@@ -16,6 +16,7 @@
     <form id="form1" runat="server">
         <div>
             <h1>Welcome to HandCricket</h1>
+            <asp:Button ID="Button1" runat="server" Text="profile" OnClick="profile_Click" />
             <asp:Button ID="btnWelcome" runat="server" Text="start" OnClick="btnstart_Click" />
         </div>
     </form>

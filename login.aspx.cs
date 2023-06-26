@@ -32,6 +32,7 @@ namespace YourNamespace
                 if (passwordCorrect)
                 {
                     // Password is correct, proceed to the authenticated page
+                    Session["Email"] = email;
                     Response.Redirect("b4toss.aspx");
                 }
                 else

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Threading;
 using System.Web.UI;
 
 namespace YourNamespace
@@ -16,13 +15,12 @@ namespace YourNamespace
             string confirmPassword = txtConfirmPassword.Value;
             
             // Perform validation on the input data (e.g., check if passwords match, etc.)
-            if (password != confirmPassword && password.Length > 7 && name.Length > 2 )
+            if (password != confirmPassword && password.Length > 1 && name.Length > 2 )
             {
                 lblErrorMessage.Text = "Password doesn't match";
                 lblErrorMessage.Visible = true;
                 ScriptManager.RegisterStartupScript(this, GetType(), "RedirectDelay", "setTimeout(function() { window.location.href = 'signup.aspx'; }, 5000);", true);
-                //Thread.Sleep(50000);
-                //Response.Redirect("signup.aspx");
+                
             }
 
             string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionString"].ConnectionString;

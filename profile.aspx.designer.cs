@@ -11,7 +11,7 @@ namespace YourNamespace
 {
 
 
-    public partial class B4toss
+    public partial class profile
     {
 
         /// <summary>
@@ -24,21 +24,39 @@ namespace YourNamespace
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Button1 control.
+        /// emailLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label emailLabel;
 
         /// <summary>
-        /// btnWelcome control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnWelcome;
+        protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
+        /// updateProfileButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button updateProfileButton;
+
+        /// <summary>
+        /// deleteAccount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button deleteAccount;
     }
 }

@@ -1,53 +1,85 @@
 ﻿using System;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Web;
+using System.Data.SqlClient;
+using System.Web.Configuration;
 using System.Web.UI;
-using OpenCvSharp;
+using System.Web.UI.WebControls;
 
 namespace YourNamespace
 {
-    public partial class LiveStreaming : Page
+    public partial class Scorecard : Page
     {
+        int flag = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (var capture = new VideoCapture(0))
+            // Check if it's a postback
+            if (!IsPostBack)
             {
-                if (!capture.IsOpened())
+                // Initialize score to 0
+                scoreLabel1.Text = "0";
+                scoreLabel2.Text = "0";
+                
+            }
+        }
+
+        protected void btn_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = (Button)sender;
+
+            // Get the value of the clicked button
+            int input = int.Parse(clickedButton.Text);
+
+            Random rand = new Random();
+
+            int computerAction = rand.Next(0, 7);
+
+            if(input == computerAction)
+            {
+                if(flag == 0)
                 {
-                    // Handle error if camera fails to open
-                    Response.Write("Camera failed to open.");
-                    return;
+                    int n1 = int.Parse(scoreLabel1.Text);
+                    int n2 = int.Parse(scoreLabel2.Text);
+
+                    if (n1 > n2)
+                    {
+                        Label1.Visible = true;
+                    }
+                    else if(n1 < n2)
+                    {
+                        Label2.Visible = true;
+                    }
+                    else
+                    {
+                        Label3.Visible = true;
+                    }
                 }
 
-                // Read a frame from the capture device
-                using (var frame = new Mat())
-                {
-                    if (!capture.Read(frame))
-                    {
-                        // Handle error if frame reading fails
-                        Response.Write("Failed to read frame.");
-                        return;
-                    }
+                myLabel.Visible = true;
+                flag = 0;
 
-                    // Convert the frame to a JPEG image
-                    var jpegImage = new Bitmap(frame.Cols, frame.Rows, PixelFormat.Format24bppRgb);
-                    var rect = new Rectangle(0, 0, frame.Cols, frame.Rows);
-                    var bmpData = jpegImage.LockBits(rect, ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
-                    //Cv2.CvtColor(frame, bmpData.Scan0, ColorConversionCodes.BGR2RGB);
-                    jpegImage.UnlockBits(bmpData);
+            }
 
-                    // Convert the JPEG image to base64 string and send it as the response
-                    using (var stream = new MemoryStream())
-                    {
-                        jpegImage.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        byte[] imageBytes = stream.ToArray();
-                        Response.BinaryWrite(imageBytes);
-                        Response.Flush();
-                        Response.End();
-                    }
-                }
+            if(flag == 1)
+            {
+                // Get the current score from the scoreLabel
+                int currentScore = int.Parse(scoreLabel1.Text);
+
+                // Add the button value to the current score
+                int newScore = currentScore + input;
+
+                // Update the scoreLabel with the new score
+                scoreLabel1.Text = newScore.ToString();
+            }
+
+            else
+            {
+                // Get the current score from the scoreLabel
+                int currentScore = int.Parse(scoreLabel2.Text);
+
+                // Add the button value to the current score
+                int newScore = currentScore + input;
+
+                // Update the scoreLabel with the new score
+                scoreLabel2.Text = newScore.ToString();
             }
         }
     }

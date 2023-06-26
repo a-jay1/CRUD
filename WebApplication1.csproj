@@ -145,12 +145,13 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="manualBat.aspx" />
+    <Content Include="profile.aspx" />
     <Content Include="toss.aspx" />
     <Content Include="tossresult.aspx" />
+    <Content Include="updateprofile.aspx" />
     <Content Include="welcome.aspx" />
     <Content Include="signup.aspx" />
     <Content Include="login.aspx" />
-    <Content Include="program.py" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -227,6 +228,13 @@
     <Compile Include="manualBat.aspx.designer.cs">
       <DependentUpon>manualBat.aspx</DependentUpon>
     </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -255,6 +263,13 @@
     </Compile>
     <Compile Include="tossresult.aspx.designer.cs">
       <DependentUpon>tossresult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateprofile.aspx.cs">
+      <DependentUpon>updateprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updateprofile.aspx.designer.cs">
+      <DependentUpon>updateprofile.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
