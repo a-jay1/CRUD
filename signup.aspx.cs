@@ -14,13 +14,11 @@ namespace YourNamespace
             string password = txtPassword.Value;
             string confirmPassword = txtConfirmPassword.Value;
             
-            // Perform validation on the input data (e.g., check if passwords match, etc.)
             if (password != confirmPassword && password.Length > 1 && name.Length > 2 )
             {
                 lblErrorMessage.Text = "Password doesn't match";
                 lblErrorMessage.Visible = true;
-                ScriptManager.RegisterStartupScript(this, GetType(), "RedirectDelay", "setTimeout(function() { window.location.href = 'signup.aspx'; }, 5000);", true);
-                
+                Response.Redirect("signup.aspx");
             }
 
             string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionString"].ConnectionString;
