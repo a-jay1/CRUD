@@ -4,6 +4,7 @@ using System.Web.Configuration;
 
 namespace YourNamespace
 {
+    
     public partial class Login : System.Web.UI.Page
     {
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -20,7 +21,9 @@ namespace YourNamespace
             if (!emailExists)
             {
                 // Email not found, redirect to the signup page
-                Response.Redirect("signup.aspx");
+                //Response.Redirect("signup.aspx");
+                lblErrorMessage.Text = "Email not valid";
+                lblErrorMessage.Visible = true;
             }
 
             //Response.Redirect("welcome.aspx");
